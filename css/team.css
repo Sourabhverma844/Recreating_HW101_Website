@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+  overflow-x: hidden;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.grid-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.grid-background::before,
+.grid-background::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(to right, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+#navcontainer {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#navLeft h1 {
+  font-size: 2.5rem;
+  color: aqua;
+}
+
+#navRight {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#navRight a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Content {
+  width: 60%;
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+#AboutUsSection{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+#AboutUsSectionTop{
+    width: 100%;
+    min-height: 15vh;
+    color: aqua;
+}
+#AboutUsSectionTop h1{
+    font-weight: bold;
+    font-size: 4rem;
+    padding: 2% 0.5%;
+}
+
+#AboutUsSectionBottom{
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+.about-card {
+  flex: 1 1 300px;
+  padding: 25px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+  color: #ccc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+.about-card .icon {
+  color: cyan;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.about-card h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+.about-card p {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+#TeamMemberSection{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+#TeamMemberSectionTop{
+    width: 100%;
+    min-height: 20vh;
+}
+#TeamMemberSectionTop h1{
+    font-weight: bold;
+    font-size: 4rem;
+    padding: 2% 0.5%;
+}
+p {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+#TeamMemberSectionBottom {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.team-card {
+  width: 280px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  text-align: center;
+  color: white;
+  padding-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.image-box {
+  height: 60%;
+  width: 100%;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 230px;
+}
+
+.team-card h3 {
+  color: cyan;
+  font-size: 1.3rem;
+  margin-top: 15px;
+}
+
+.role {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin: 5px 0 10px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.skills span {
+  background-color: #00ffff;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+#FooterBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  background-color: black;
+  opacity: 0.8;
+  color:white;
+}
